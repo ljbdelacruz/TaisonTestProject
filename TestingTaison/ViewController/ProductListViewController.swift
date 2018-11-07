@@ -82,7 +82,7 @@ extension ProductListViewController:UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.productList.count;
     }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell=self.UIProductListTV.dequeueReusableCell(withIdentifier: "Cell1", for: indexPath) as! Cell1TableViewCell;
         cell.setContent(name: self.productList[indexPath.row].name, price: self.productList[indexPath.row].Price, quantity: self.productList[indexPath.row].quantity)
         return cell;
@@ -96,7 +96,6 @@ extension ProductListViewController:UITableViewDelegate, UITableViewDataSource{
     func ConfigureTVCell(){
         self.UIProductListTV.rowHeight=150;
     }
-    
 }
 //MARK: -UISearchBar Functionalities
 extension ProductListViewController : UISearchBarDelegate{
